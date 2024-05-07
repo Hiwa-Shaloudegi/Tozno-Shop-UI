@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:tozno/pages/intro/widgets/intro_item_view.dart';
 
+import '../auth/auth_page.dart';
+
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
 
@@ -73,7 +75,15 @@ class _IntroPageState extends State<IntroPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AuthPage(),
+                          ),
+                          (route) => false,
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(Colors.transparent),
@@ -125,10 +135,20 @@ class _IntroPageState extends State<IntroPage> {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        pageController.nextPage(
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.easeInOut,
-                        );
+                        if (pageController.page != _introContents.length - 1) {
+                          pageController.nextPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeInOut,
+                          );
+                        } else {
+                          Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AuthPage(),
+                            ),
+                            (route) => false,
+                          );
+                        }
                       },
                       style: ButtonStyle(
                         backgroundColor:
