@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tozno/pages/splash/splash_page.dart';
+
+import 'features/splash/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
