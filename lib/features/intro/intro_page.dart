@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:tozno/config/routes/app_routes.dart';
 import 'package:tozno/features/intro/widgets/intro_item_view.dart';
-
-import '../auth/auth_page.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -77,11 +76,9 @@ class _IntroPageState extends State<IntroPage> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pushAndRemoveUntil(
+                        Navigator.pushNamedAndRemoveUntil(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const AuthPage(),
-                          ),
+                          AppPages.auth,
                           (route) => false,
                         );
                       },
@@ -142,11 +139,9 @@ class _IntroPageState extends State<IntroPage> {
                             curve: Curves.easeInOut,
                           );
                         } else {
-                          Navigator.pushAndRemoveUntil(
+                          Navigator.pushNamedAndRemoveUntil(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) => const AuthPage(),
-                            ),
+                            AppPages.auth,
                             (route) => false,
                           );
                         }

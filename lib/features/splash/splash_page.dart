@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../intro/intro_page.dart';
+import 'package:tozno/config/routes/app_routes.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -14,12 +13,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     Future.delayed(const Duration(milliseconds: 2500)).then(
-      (value) => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const IntroPage(),
-        ),
-      ),
+      (value) => Navigator.pushNamed(context, AppPages.intro),
     );
     super.initState();
   }

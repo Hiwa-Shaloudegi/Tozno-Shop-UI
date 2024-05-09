@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tozno/config/routes/app_routes.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -55,7 +56,13 @@ class LoginForm extends StatelessWidget {
               ),
               const SizedBox(height: 28),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    AppPages.main,
+                    (route) => false,
+                  );
+                },
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all(const Color(0xff3A41EE)),
@@ -83,9 +90,6 @@ class LoginForm extends StatelessWidget {
                     style: GoogleFonts.quicksand(
                       textStyle: const TextStyle(
                         color: Colors.black,
-
-                        // fontSize: 18,
-                        // fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
@@ -95,9 +99,6 @@ class LoginForm extends StatelessWidget {
                       textStyle: const TextStyle(
                         color: Colors.black,
                         decoration: TextDecoration.underline,
-
-                        // fontSize: 18,
-                        // fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
