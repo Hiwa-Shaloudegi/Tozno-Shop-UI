@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tozno/features/auth/auth_page.dart';
+import 'package:tozno/features/categories/categories_page.dart';
 import 'package:tozno/features/home/cubits/bottomnav_cubit.dart';
 import 'package:tozno/features/home/home_page.dart';
 import 'package:tozno/features/home/main_wrapper.dart';
@@ -19,5 +20,6 @@ abstract class AppRoutes {
           child: const MainWrapper(),
         ),
     AppPages.home: (context) => const HomePage(),
+    AppPages.categories: (context) => const CategoriesPage(),
   };
 }

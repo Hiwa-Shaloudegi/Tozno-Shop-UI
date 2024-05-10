@@ -6,4 +6,5 @@ abstract class AppPages {
   static const auth = 'auth/';
   static const main = 'main/';
   static const home = 'home/';
+  static const categories = 'categories/';
 }
