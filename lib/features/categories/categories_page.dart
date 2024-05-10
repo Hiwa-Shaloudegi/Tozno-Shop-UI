@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tozno/common/widgets/custom_app_bar.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({super.key});
@@ -10,32 +10,7 @@ class CategoriesPage extends StatelessWidget {
     var size = MediaQuery.sizeOf(context);
 
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'CATEGORIES',
-          style: GoogleFonts.montserrat(
-            textStyle: const TextStyle(
-              color: Colors.black,
-              fontSize: 18,
-            ),
-          ),
-        ),
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(CupertinoIcons.back),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(CupertinoIcons.search),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.menu_rounded),
-          ),
-        ],
-      ),
+      appBar: const CustomAppBar(title: 'CATEGORIES'),
       body: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(child: SizedBox(height: 16)),

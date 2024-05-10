@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tozno/config/routes/app_routes.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -137,19 +138,25 @@ class _HomePageState extends State<HomePage> {
                   itemCount: 3,
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Container(
-                          width: size.height * 0.21,
-                          height: size.height * 0.15,
-                          margin: const EdgeInsets.symmetric(vertical: 8),
-                          decoration: BoxDecoration(
-                            color: const Color(0xffD0D0D0),
-                            borderRadius: BorderRadius.circular(8),
+                    return GestureDetector(
+                      onTap: () => Navigator.pushNamed(
+                        context,
+                        AppPages.categories,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            width: size.height * 0.21,
+                            height: size.height * 0.15,
+                            margin: const EdgeInsets.symmetric(vertical: 8),
+                            decoration: BoxDecoration(
+                              color: const Color(0xffD0D0D0),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                           ),
-                        ),
-                        const Text('MEN’S'),
-                      ],
+                          const Text('MEN’S'),
+                        ],
+                      ),
                     );
                   },
                   separatorBuilder: (context, index) =>
@@ -170,10 +177,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 16,
-                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -186,21 +190,44 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        Text(
-                          'VIEW ALL',
-                          style: GoogleFonts.montserrat(
-                            textStyle: const TextStyle(
-                              color: Color(0xff3A41EE),
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 4,
+                            ), // and this
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(
+                              context,
+                              AppPages.productList,
+                            );
+                          },
+                          child: Text(
+                            'VIEW ALL',
+                            style: GoogleFonts.montserrat(
+                              textStyle: const TextStyle(
+                                color: Color(0xff3A41EE),
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),
+                        // Text(
+                        //   'VIEW ALL',
+                        //   style: GoogleFonts.montserrat(
+                        //     textStyle: const TextStyle(
+                        //       color: Color(0xff3A41EE),
+                        //       fontSize: 12,
+                        //       fontWeight: FontWeight.w500,
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),
-                  Container(
-                    // color: Colors.deepPurple.shade50,
+                  SizedBox(
                     height: size.height * 0.35,
                     child: ListView.separated(
                       padding: const EdgeInsets.symmetric(horizontal: 16),

@@ -7,4 +7,5 @@ abstract class AppPages {
   static const main = 'main/';
   static const home = 'home/';
   static const categories = 'categories/';
+  static const productList = 'product-list/';
 }
