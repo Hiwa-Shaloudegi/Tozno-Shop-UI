@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tozno/features/auth/auth_page.dart';
+import 'package:tozno/features/cart/cart_page.dart';
 import 'package:tozno/features/categories/categories_page.dart';
 import 'package:tozno/features/home/cubits/bottomnav_cubit.dart';
 import 'package:tozno/features/home/home_page.dart';
@@ -27,5 +28,6 @@ abstract class AppRoutes {
           create: (context) => ViewModeCubit(),
           child: const ProductListPage(),
         ),
+    AppPages.cart: (context) => const CartPage(),
   };
 }

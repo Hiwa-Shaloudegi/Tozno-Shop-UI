@@ -113,7 +113,9 @@ class _HomePageState extends State<HomePage> {
                               minimumSize: MaterialStateProperty.all(
                                   const Size(100, 40)),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, AppPages.cart);
+                            },
                             child: const Text(
                               'BUY NOW',
                               style: TextStyle(
@@ -195,7 +197,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.symmetric(
                               horizontal: 10,
                               vertical: 4,
-                            ), // and this
+                            ),
                           ),
                           onPressed: () {
                             Navigator.pushNamed(
