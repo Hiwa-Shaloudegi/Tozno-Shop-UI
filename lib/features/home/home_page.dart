@@ -236,58 +236,64 @@ class _HomePageState extends State<HomePage> {
                       scrollDirection: Axis.horizontal,
                       itemCount: 8,
                       itemBuilder: (context, index) {
-                        return SizedBox(
-                          width: size.height * 0.3,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                height: size.height * 0.26,
-                                width: size.height * 0.3,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xffD0D0D0),
-                                  borderRadius: BorderRadius.circular(8),
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, AppPages.productDetail);
+                          },
+                          child: SizedBox(
+                            width: size.height * 0.3,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: size.height * 0.26,
+                                  width: size.height * 0.3,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xffD0D0D0),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 12),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Minimal T-Shirt',
-                                        style: GoogleFonts.montserrat(
-                                          textStyle: const TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
+                                const SizedBox(height: 12),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Minimal T-Shirt',
+                                          style: GoogleFonts.montserrat(
+                                            textStyle: const TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Text(
-                                        '\$235.00',
-                                        style: GoogleFonts.montserrat(
-                                          textStyle: const TextStyle(
-                                            color: Color(0xff3A41EE),
-                                            fontSize: 14,
+                                        Text(
+                                          '\$235.00',
+                                          style: GoogleFonts.montserrat(
+                                            textStyle: const TextStyle(
+                                              color: Color(0xff3A41EE),
+                                              fontSize: 14,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      CupertinoIcons.shopping_cart,
-                                      size: 28,
+                                      ],
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(
+                                        CupertinoIcons.shopping_cart,
+                                        size: 28,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       },

@@ -9,4 +9,5 @@ abstract class AppPages {
   static const categories = 'categories/';
   static const productList = 'product-list/';
   static const cart = 'cart/';
+  static const productDetail = 'product-detail/';
 }

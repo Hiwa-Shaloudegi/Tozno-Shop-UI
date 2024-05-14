@@ -6,19 +6,27 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
     required this.title,
+    this.backgroundColor,
+    this.foregroundColor,
+    this.titleColor,
   });
 
   final String title;
+  final Color? backgroundColor;
+  final Color? foregroundColor;
+  final Color? titleColor;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       centerTitle: true,
+      backgroundColor: backgroundColor,
+      foregroundColor: foregroundColor,
       title: Text(
         title,
         style: GoogleFonts.montserrat(
-          textStyle: const TextStyle(
-            color: Colors.black,
+          textStyle: TextStyle(
+            color: titleColor ?? Colors.black,
             fontSize: 18,
           ),
         ),
