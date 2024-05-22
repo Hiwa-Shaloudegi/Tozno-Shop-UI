@@ -10,4 +10,5 @@ abstract class AppPages {
   static const productList = 'product-list/';
   static const cart = 'cart/';
   static const productDetail = 'product-detail/';
+  static const checkout = 'checkout/';
 }

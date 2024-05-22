@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tozno/features/auth/auth_page.dart';
 import 'package:tozno/features/cart/cart_page.dart';
 import 'package:tozno/features/categories/categories_page.dart';
+import 'package:tozno/features/checkout/checkout_page.dart';
 import 'package:tozno/features/home/cubits/bottomnav_cubit.dart';
 import 'package:tozno/features/home/home_page.dart';
 import 'package:tozno/features/home/main_wrapper.dart';
@@ -31,5 +32,6 @@ abstract class AppRoutes {
         ),
     AppPages.cart: (context) => const CartPage(),
     AppPages.productDetail: (context) => const ProductDetailPage(),
+    AppPages.checkout: (context) => const CheckoutPage(),
   };
 }

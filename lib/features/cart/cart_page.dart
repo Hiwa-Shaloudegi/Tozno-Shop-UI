@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tozno/common/widgets/custom_app_bar.dart';
+import 'package:tozno/config/routes/app_routes.dart';
 import 'package:tozno/features/cart/widgets/cart_info_item.dart';
 
 class CartPage extends StatelessWidget {
@@ -185,7 +186,9 @@ class CartPage extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 16),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppPages.checkout);
+                  },
                   child: Text(
                     'CHECKOUT',
                     style: GoogleFonts.montserrat(
