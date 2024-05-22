@@ -313,11 +313,11 @@ class ProductDetailPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     CupertinoIcons.check_mark_circled_solid,
                     color: Color(0xff3A41EE),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Text(
                     'FREE DELIVERY',
                     overflow: TextOverflow.ellipsis,
@@ -329,12 +329,12 @@ class ProductDetailPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
-                  Icon(
+                  const Spacer(),
+                  const Icon(
                     CupertinoIcons.check_mark_circled_solid,
                     color: Color(0xff3A41EE),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Text(
                     'EXCHANGE',
                     overflow: TextOverflow.ellipsis,
@@ -346,12 +346,12 @@ class ProductDetailPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
-                  Icon(
+                  const Spacer(),
+                  const Icon(
                     CupertinoIcons.check_mark_circled_solid,
                     color: Color(0xff3A41EE),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Text(
                     'FREE GIFT CARD',
                     overflow: TextOverflow.ellipsis,

@@ -10,7 +10,13 @@ void main() {
       DeviceOrientation.portraitDown,
     ],
   );
-  runApp(const MyApp());
+  runApp(
+    MyApp(),
+    // DevicePreview(
+    //   enabled: true,
+    //   builder: (context) => MyApp(),
+    // ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,6 +25,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // locale: DevicePreview.locale(context),
+      // builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: 'Tozno Shop',
       theme: ThemeData(
