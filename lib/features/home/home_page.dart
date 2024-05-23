@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tozno/config/routes/app_routes.dart';
+import 'package:tozno/features/home/widgets/category_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,6 +26,11 @@ class _HomePageState extends State<HomePage> {
                 height: size.height * 0.4,
                 decoration: const BoxDecoration(
                   color: Color(0xffFFE5CE),
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/home_header.png'),
+                    alignment: Alignment.bottomLeft,
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -63,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                               textStyle: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
@@ -73,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                               textStyle: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
@@ -90,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                               textStyle: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 12,
-                                fontWeight: FontWeight.w300,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
@@ -106,12 +112,12 @@ class _HomePageState extends State<HomePage> {
                           const SizedBox(height: 8),
                           ElevatedButton(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
+                              backgroundColor: WidgetStateProperty.all(
                                   const Color(0xff3A41EE)),
                               foregroundColor:
-                                  MaterialStateProperty.all(Colors.white),
-                              minimumSize: MaterialStateProperty.all(
-                                  const Size(100, 40)),
+                                  WidgetStateProperty.all(Colors.white),
+                              minimumSize:
+                                  WidgetStateProperty.all(const Size(100, 40)),
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, AppPages.cart);
@@ -135,35 +141,7 @@ class _HomePageState extends State<HomePage> {
             SliverToBoxAdapter(
               child: SizedBox(
                 height: size.height * 0.21,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 3,
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () => Navigator.pushNamed(
-                        context,
-                        AppPages.categories,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: size.height * 0.21,
-                            height: size.height * 0.15,
-                            margin: const EdgeInsets.symmetric(vertical: 8),
-                            decoration: BoxDecoration(
-                              color: const Color(0xffD0D0D0),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                          ),
-                          const Text('MEN’S'),
-                        ],
-                      ),
-                    );
-                  },
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(width: 16),
-                ),
+                child: const CategorySection(),
               ),
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 8)),
@@ -216,16 +194,6 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // Text(
-                        //   'VIEW ALL',
-                        //   style: GoogleFonts.montserrat(
-                        //     textStyle: const TextStyle(
-                        //       color: Color(0xff3A41EE),
-                        //       fontSize: 12,
-                        //       fontWeight: FontWeight.w500,
-                        //     ),
-                        //   ),
-                        // ),
                       ],
                     ),
                   ),
@@ -252,6 +220,14 @@ class _HomePageState extends State<HomePage> {
                                   decoration: BoxDecoration(
                                     color: const Color(0xffD0D0D0),
                                     borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        index % 2 == 0
+                                            ? 'assets/images/home_men.png'
+                                            : 'assets/images/home_women.png',
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(height: 12),

@@ -32,7 +32,17 @@ class _AuthPageState extends State<AuthPage> {
                   Container(
                     width: double.infinity,
                     height: size.height * 0.35,
-                    color: const Color(0xff3A41EE),
+                    decoration: const BoxDecoration(
+                      color: Color(0xff3A41EE),
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/images/intro_0.png',
+                        ),
+                        filterQuality: FilterQuality.high,
+                        alignment: Alignment(0, -0.9),
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
                   ),
                   Positioned(
                     top: size.height * 0.09,

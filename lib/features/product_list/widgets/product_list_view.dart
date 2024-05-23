@@ -21,6 +21,14 @@ class ProductListView extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: const Color(0xffDBDFE0),
                   borderRadius: BorderRadius.circular(4),
+                  image: DecorationImage(
+                    image: AssetImage(
+                      index % 3 == 0
+                          ? 'assets/images/home_men.png'
+                          : 'assets/images/home_women.png',
+                    ),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               const SizedBox(width: 12),

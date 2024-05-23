@@ -23,7 +23,15 @@ class ProductDetailPage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: size.height * 0.5,
-                  color: const Color(0xffD0D0D0),
+                  decoration: const BoxDecoration(
+                    color: Color(0xffD0D0D0),
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/detail_women.png',
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 const Positioned(
                   left: 0,
@@ -47,6 +55,12 @@ class ProductDetailPage extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: Color(0xffD0D0D0),
                           shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/detail_women.png',
+                            ),
+                            fit: BoxFit.cover,
+                          ),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black54,
@@ -62,6 +76,12 @@ class ProductDetailPage extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: Color(0xffD0D0D0),
                           shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/detail_women.png',
+                            ),
+                            fit: BoxFit.cover,
+                          ),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black54,

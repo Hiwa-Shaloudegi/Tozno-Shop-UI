@@ -53,9 +53,17 @@ class CartPage extends StatelessWidget {
                             child: Container(
                               width: size.width * 0.41,
                               // height: size.height * 0.18,
-                              decoration: const BoxDecoration(
-                                color: Color(0xffECECEC),
-                                borderRadius: BorderRadius.only(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffECECEC),
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    index == 0
+                                        ? 'assets/images/home_women.png'
+                                        : 'assets/images/home_men.png',
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   bottomLeft: Radius.circular(8),
                                 ),
@@ -180,9 +188,9 @@ class CartPage extends StatelessWidget {
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(const Color(0xff3A41EE)),
-                    foregroundColor: MaterialStateProperty.all(Colors.white),
-                    padding: MaterialStateProperty.all(
+                        WidgetStateProperty.all(const Color(0xff3A41EE)),
+                    foregroundColor: WidgetStateProperty.all(Colors.white),
+                    padding: WidgetStateProperty.all(
                       const EdgeInsets.symmetric(vertical: 16),
                     ),
                   ),
