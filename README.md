@@ -1,6 +1,6 @@
 # Tozno Shop
 
-An open-source **Flutter** shopping app interface.
+An open-source Flutter shopping app interface.
 
 ## Preview
 <p align="center">
