@@ -1,16 +1,16 @@
-# tozno
+# Tozno Shop
 
-A new Flutter project.
+An open-source **Flutter** shopping app interface.
 
-## Getting Started
+## Preview
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/509efe80-6064-482f-b61f-1ffbb8814e3e" width="200"  hspace="4" />
+  <img src="https://github.com/user-attachments/assets/cbb33f78-0209-4d64-85db-f0e0ecf37978" width="200"  hspace="4" />
+  <img src="https://github.com/user-attachments/assets/c5a1ae43-2fde-4c64-b67e-bb346a6feb0f" width="200"  hspace="4" />
+</p>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ebfb6e69-b430-4228-b387-8b8cae06ea5f" width="200"  hspace="4" />
+  <img src="https://github.com/user-attachments/assets/8968241d-0cab-4215-a844-450a29b713db" width="200"  hspace="4" />
+  <img src="https://github.com/user-attachments/assets/bea549a8-c42d-47a3-87d3-0117f6b65fb6" width="200"  hspace="4" />
+</p>
