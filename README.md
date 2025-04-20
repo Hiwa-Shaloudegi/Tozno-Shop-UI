@@ -4,7 +4,7 @@ An open-source Flutter shopping app interface.
 
 ## Preview
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/509efe80-6064-482f-b61f-1ffbb8814e3e" width="200"  hspace="4" />
+  <img src="https://github.com/user-attachments/assets/3a75135a-234a-4e2a-b594-31b7fa67528f" width="200"  hspace="4" />
   <img src="https://github.com/user-attachments/assets/cbb33f78-0209-4d64-85db-f0e0ecf37978" width="200"  hspace="4" />
   <img src="https://github.com/user-attachments/assets/c5a1ae43-2fde-4c64-b67e-bb346a6feb0f" width="200"  hspace="4" />
 </p>
